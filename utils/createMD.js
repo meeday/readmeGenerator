@@ -42,9 +42,17 @@ function permissionChange(permission){
 function createMD(answers) {
   return `
   # **${answers.title}**
- 
-  ${deploymentChange(answers.deployment)}  ${maintenanceChange(answers.maintenance)}  ${licenseChange(answers.license)} ${permissionChange(answers.permission)}
-  
+  ${deploymentChange(answers.deployment)} 
+  ${maintenanceChange(answers.maintenance)}  
+  ${licenseChange(answers.license)} 
+  ${permissionChange(answers.permission)}
+  [![GitHub issues](https://img.shields.io/github/issues/${answers.user}/${answers.title}.svg)](https://GitHub.com/${answers.user}/${answers.title}/issues/)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+  [![GitHub followers](https://img.shields.io/github/followers/${answers.user}.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/${answers.user}?tab=followers)
+  [![GitHub watchers](https://img.shields.io/github/watchers/${answers.user}/${answers.title}.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/${answers.user}/${answers.title}/watchers/)
+  [![GitHub stars](https://img.shields.io/github/stars/${answers.user}/${answers.title}.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/${answers.user}/${answers.title}/stargazers/)
+  ![Tweeting](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
   ## __Description__
   ${answers.description}
   

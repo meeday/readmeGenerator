@@ -75,9 +75,10 @@ async function questions() {
     function writeToFile(fileName, data) {
       return FS.writeFileSync(fileName, data);
   };
-    writeToFile("GeneratedREADME.md", await markDown)
+    
+    writeToFile("GeneratedREADME.md", await markDown,)
       console.log("README successfully generated!")
-  
+    
   } catch (err) {
     console.log(err);
   }
