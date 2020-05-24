@@ -20,7 +20,7 @@ The javaScript utilises the ES6 features like async functions, template literals
 
 ScreenCastify chrome extension was used to record a demo of the app. A gif is provided in the assets folder as well as a more detailed video of the demo.
 
-![Alt Text](Assets\App-Demo.gif)
+![Alt Text](Assets/App-Demo.gif)
 
 ## Links
 github repo link : https://github.com/meeday/readmeGenerator
