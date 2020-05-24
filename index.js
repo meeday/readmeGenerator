@@ -35,6 +35,12 @@ async function questions() {
         name: "usage",
       },
       {
+        type: "checkbox",
+        message: "What Technologies Have you used?",
+        name: "technologies",
+        choices: ["HTML", "JavaScript", "CSS", "Node", "Other"],
+      },
+      {
         type: "list",
         message: "What is the license of your repo?",
         name: "license",
@@ -87,12 +93,9 @@ async function questions() {
     ]);
     // const that holds the result of the api call made with axios in the axios.js file 
     const userAnswers = await api.userInfo(answers.user);
-    // console.log(userAnswer);
-
     // The full name as well as the profile picture of the user is taken from the api result and attached to the answers object  
     answers.name = userAnswers.name;
     answers.pic = userAnswers.avatar_url;
-    //console.log(answers.pic);
     // pass answers parameter through the createMD function and then thats put into a const for cleaner code thats easier to follow
     const markDown = createMD(answers);
     // WriteTo File function created with filename and data parameters that returns the written markdown file using file system module
