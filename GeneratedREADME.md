@@ -1,5 +1,5 @@
 
-  # **Readme File**
+  # **readme file**
 
   ## Name of Repo: readmeGenerator
 
@@ -12,7 +12,7 @@
   ![Tweeting](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)
 
   ## __Description__
-  Node application that generates a readme file based on users inputs and writes thos inputs to a markdown file. Utilises axios to access the github api
+  node application that generates readme using user input
   
   ## __Table of Contents__
   * [Installation](#installation)
@@ -28,7 +28,7 @@
   npm init
   
   ## __Usage__
-  open terminal and type npm start or node index.js and press enter and follow prompts
+  run terminal and type npm start or node index.js
   
   ## __License__
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) 
@@ -36,7 +36,7 @@
   ## __Contributions__
   [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
   - Current Contributors:meeday
-  - create a branch, open issue, make pull request and link to open issue
+  - create your own repo
   
   ## __Tests__
   no test required
