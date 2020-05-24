@@ -19,6 +19,7 @@ The app utilises various npm modules in order to work. The user might be require
 The javaScript utilises the ES6 features like async functions, template literals etc. Switch functions were used to change badges based on user inputs. The entire app is spread across three javaScript files so module.export and node require were used to ensure that each file had access to functions and methods they needed.
 
 ScreenCastify chrome extension was used to record a demo of the app. A gif is provided in the assets folder as well as a more detailed video of the demo.
+https://hnet.com/video-to-gif/ was used to convert the video demo into two gif files
 
 ![Alt Text](Assets/App-Demo.gif)
 ![Alt Text](Assets/App-Demo2.gif)
