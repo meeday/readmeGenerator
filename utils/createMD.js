@@ -45,16 +45,25 @@ function permissionChange(permission) {
       return "[![Contributions](https://img.shields.io/badge/contributions-Not%20Allowed-red.svg)](https://shields.io/)"
   }
 }
+// technologies function uses a for loop to create different badges based on the technologies user selected and feeds it into the tech string variable
+ function technologies(arr) {
+   let tech = "";
+   for(i = 0; i < arr.length; i++) {
+   tech += `[![made-with-tech](https://img.shields.io/badge/Made%20with-${arr[i]}-1f425f.svg)](https://shields.io/)\n `;
+   }
+  return tech;
+ }
 
 // create MD function takes the answers from the prompts and returns the content of the readme file in markdown syntax
 function createMD(answers) {
+  const Techbadges = technologies(answers.technologies);
   return `
   # **${answers.fileName}**
 
   ## Name of Repo: ${answers.title}
-
-  ${deploymentChange(answers.deployment)} ${maintenanceChange(answers.maintenance)} 
-  [![GitHub issues](https://img.shields.io/github/issues/${answers.user}/${answers.title}.svg)](https://GitHub.com/${answers.user}/${answers.title}/issues/)
+  ${Techbadges}
+  ${deploymentChange(answers.deployment)} ${maintenanceChange(answers.maintenance)}
+  [![GitHub issues](https://img.shields.io/github/issues/${answers.user}/${answers.title}.svg)](https://GitHub.com/${answers.user}/${answers.title}/issues/)\n
   [![GitHub followers](https://img.shields.io/github/followers/${answers.user}.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/${answers.user}?tab=followers)
   [![GitHub watchers](https://img.shields.io/github/watchers/${answers.user}/${answers.title}.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/${answers.user}/${answers.title}/watchers/)
   [![GitHub stars](https://img.shields.io/github/stars/${answers.user}/${answers.title}.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/${answers.user}/${answers.title}/stargazers/)
@@ -85,7 +94,7 @@ function createMD(answers) {
   
   ## __Contributions__
   ${permissionChange(answers.permission)}
-  - Current Contributors:${answers.contributors}
+  - Current Contributors: ${answers.contributors}
   - ${answers.contribution}
   
   ## __Tests__
